@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
 
 def pagina_principal():
     st.title("Predicción del nivel de estrés mediante aprendizaje automático")
