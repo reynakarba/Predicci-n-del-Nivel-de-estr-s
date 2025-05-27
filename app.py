@@ -47,7 +47,9 @@ def categorize_BMI(level):
 
 def Modelo1():
     st.title("Regresión Logística")
-    model1 = joblib.load('modelos/regresionlogistica_sinajuste.pkl')
+    BASE_DIR = os.path.dirname(__file__)
+    model_path = os.path.join(BASE_DIR, "modelos", "regresionlogistica_sinajuste.pkl")
+    model1 = joblib.load(model_path)
 
     workload = st.slider("Nivel de Carga de Trabajo (1-10)", 1, 10, 5)
     heart_rate = st.slider("Frecuencia Cardíaca (bpm)", 40, 180, 70)
