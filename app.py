@@ -47,7 +47,7 @@ def categorize_BMI(level):
 
 def Modelo1():
     st.title("Regresión Logística")
-    model1 = joblib.load('C:/Users/reyna/Desktop/modelos/modelos/regresionlogistica_sinajuste.pkl')
+    model1 = joblib.load('/modelos/regresionlogistica_sinajuste.pkl')
 
     workload = st.slider("Nivel de Carga de Trabajo (1-10)", 1, 10, 5)
     heart_rate = st.slider("Frecuencia Cardíaca (bpm)", 40, 180, 70)
@@ -77,7 +77,7 @@ def Modelo1():
 def Modelo2():
     st.title("Support Vector Machine")
     
-    model2 = joblib.load("C:/Users/reyna/Desktop/modelos/modelo_svm.pkl")
+    model2 = joblib.load("/modelos/modelo_svm.pkl")
     
     label_mapping = {
         0: "bajo",
@@ -109,7 +109,7 @@ def Modelo2():
 
 
 def Modelo3():
-    model3 = joblib.load('C:/Users/reyna/tree_model.pkl')
+    model3 = joblib.load('/modelos/tree_model.pkl')
     st.title("Predicción de Nivel de Estrés segun el modelo de Random Forest") 
 
     workload = st.slider("Nivel de Carga de Trabajo (1-10)", 1, 10, 5)
@@ -133,7 +133,7 @@ def Modelo3():
         st.write(f"El nivel de estrés estimado es: {prediction[0]}")
 
 def Modelo4():
-    model4 = joblib.load('C:/Users/reyna/Desktop/modelos/modelos/modelo5_ajustado.pkl')
+    model4 = joblib.load('/modelos/modelo5_ajustado.pkl')
     st.title("Predicción de Nivel de Estrés según el ensamble de Adaboost") 
 
     workload = st.slider("Nivel de Carga de Trabajo (1-10)", 1, 10, 5)
